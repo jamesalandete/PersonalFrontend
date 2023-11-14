@@ -1,0 +1,29 @@
+<form [formGroup]="personForm">
+  <div class="col-md-12">
+    <div class="row">
+      <div class="col-md-12">
+        <label class="control-label">Tipo identificacion</label>
+        <select class="form-select" formControlName="tipoIdentificacionId">
+          <option value="">Seleccione</option>
+          <option *ngFor="let item of listTipoIdentificacion" value="{{item.id}}">{{ item.descripcion }}</option>
+        </select>
+      </div>
+      <div class="col-md-12">
+        <label class="control-label">Numero identificacion</label>
+        <input class="form-control" id="numeroIdentificacion" formControlName="numeroIdentificacion" />
+      </div>
+      <div class="col-md-12">
+        <label class="control-label">Nombres</label>
+        <input class="form-control" id="nombres" formControlName="nombres" />
+      </div>
+      <div class="col-md-12">
+        <label class="control-label">Apellidos</label>
+        <input class="form-control" id="apellidos" formControlName="apellidos" />
+      </div>
+      <div class="col-md-12">
+        <label class="control-label">Correo electronico</label>
+        <input class="form-control" id="email" formControlName="email" />
+      </div>
+    </div>
+  </div>
+</form>

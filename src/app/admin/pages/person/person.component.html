@@ -1,0 +1,37 @@
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a routerLink="/admin/home">Home</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Person</li>
+  </ol>
+</nav>
+<div class="col-md-12">
+  <div class="row">
+    <div class="col-md-2">
+      <button class="btn btn-block btn-success" (click)="newDriver()">New person</button>
+    </div>
+    <div class="col-md-10"></div>
+  </div>
+  <hr>
+  <div class="row">
+    <div class="col-md-12">
+      <app-person-table (outOpenModal)="inOpenModal($event)"></app-person-table>
+    </div>
+  </div>
+</div>
+
+<div id="modal-form-person" class="modal" [ngClass]="{'ModalShow': openModal}" tabindex="-1" role="dialog" >
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Vehicle information</h5>
+      </div>
+      <div class="modal-body">
+          <app-person-form [submitForm]="submitForm" (outOpenModal)="inOpenModal($event)"></app-person-form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" (click)="submit()">Save</button>
+        <button type="button" class="btn btn-secondary" (click)="closeModal()">Close</button>
+      </div>
+    </div>
+  </div>
+</div>

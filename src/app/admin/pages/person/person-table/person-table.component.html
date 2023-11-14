@@ -1,0 +1,21 @@
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col"># Id</th>
+      <th scope="col">Identificacion</th>
+      <th scope="col">Nombre completo</th>
+      <th scope="col">Email</th>
+      <th scope="col">Accion</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of listsPersons">
+      <td>{{item.id}}</td>
+      <td>{{item.identificacion}}</td>
+      <td>{{item.nombreCompleto}}</td>
+      <td>{{item.email}}</td>
+      <td><a class="btn btn-info btn-xs" title="Editar" (click)="selectItem(item)"><i class="fas fa-edit"></i></a></td>
+    </tr>
+
+  </tbody>
+</table>

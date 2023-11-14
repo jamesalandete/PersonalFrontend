@@ -1,0 +1,17 @@
+<ngx-spinner bdColor = "rgba(0, 0, 0, 0.8)" size = "medium" color = "#fff" type = "square-jelly-box" [fullScreen] = "true"><p style="color: white" > Loading... </p></ngx-spinner>
+<div class="row">
+  <div class="col-md-3">
+   <app-sidebar></app-sidebar>
+  </div>
+  <div class="col-md-9">
+    <div class="row">
+      <router-outlet></router-outlet>
+    </div>
+    <div class="row" style="margin-top: 90vh;">
+      <app-footer></app-footer>
+    </div>
+  </div>
+</div>
+
+
+<!--Container Main end-->

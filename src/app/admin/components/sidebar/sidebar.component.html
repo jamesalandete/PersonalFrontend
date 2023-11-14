@@ -1,0 +1,26 @@
+<div class="d-flex flex-column flex-shrink-0 p-3 bg-light height-sidebar">
+  <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
+    <svg class="bi me-2" width="40" height="32">
+      <use xlink:href="#bootstrap"></use>
+    </svg>
+    <span class="fs-4">Transport</span>
+  </a>
+  <hr>
+  <ul class="nav nav-pills flex-column mb-auto">
+    <li class="nav-item">
+      <a class="nav-link" routerLink="/admin/home" routerLinkActive="active" aria-current="page">
+        <i class="fa-solid fa-house"></i>
+        inicio
+      </a>
+    </li>
+    <li>
+      <a class="nav-link link-dark"  routerLink="/admin/person" routerLinkActive="active">
+        Personas
+      </a>
+    </li>
+  </ul>
+  <hr>
+  <a class="btn btn-block btn-danger" (click)="logout()">Cerrar sesion
+  </a>
+
+</div>
